@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 235, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 231, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 606, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+192.168.137.1 - - [12/Dec/2019 19:37:23] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 19:38:08] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 19:38:46] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 19:41:49] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 19:45:00] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 19:52:22] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 20:16:54] "GET / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 235, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 231, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 606, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+192.168.137.1 - - [12/Dec/2019 20:18:28] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 20:24:04] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [12/Dec/2019 20:24:04] "GET / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 293, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 657, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 716, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 283, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+192.168.137.1 - - [12/Dec/2019 20:25:14] "GET / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 293, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 657, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 716, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 283, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+192.168.137.1 - - [12/Dec/2019 20:25:14] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:19:53] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:19:54] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:24] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:24] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:24] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:25] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:26] "GET /temp.html HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:27] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:27] "GET / HTTP/1.1" 200 -
+192.168.137.1 - - [27/Jan/2020 20:29:28] "GET / HTTP/1.1" 200 -

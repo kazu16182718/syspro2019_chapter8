@@ -10,9 +10,9 @@ import datetime
 import json
 import os
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/pi/syspro-chapter8.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/pi/syspro_firebase_secret.json"
 
-cred = credentials.Certificate('/home/pi/syspro-chapter8.json')
+cred = credentials.Certificate('/home/pi/syspro_firebase_secret.json')
 firebase_admin.initialize_app(cred)
 i2c = smbus.SMBus(1)
 address = 0x48
@@ -32,12 +32,12 @@ def on_snapshot(doc_snapshot, changes, read_time):
         led = change.document.to_dict()["led"]
         print(u'LED: {}'.format(led))
         if led == "ON":
-            print "ON"
-            # ONにする処理
+            print("ON")
+            GPIO.output(14,GPIO.HIGH)
         elif led == "OFF":
-            print "OFF"
+            print("OFF")
+            GPIO.output(14,GPIO.LOW)
             # OFFにする処理
-
 
 on_ref = db.collection('led').where(u'led', u'==', u'ON')
 off_ref = db.collection('led').where(u'led', u'==', u'OFF')
